@@ -5,142 +5,127 @@
 <title>Phase 7 Workflows — DirectDebit.cc</title>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <style>
-* { box-sizing: border-box; }
-body { font-family: Arial, sans-serif; background: #F4F6F9; margin: 0; padding: 24px; }
-h1 { color: #172B4D; font-size: 22px; margin-bottom: 4px; }
-.subtitle { color: #2D3F5C; font-size: 13px; margin-bottom: 32px; }
-.wf { background: white; border-radius: 16px; padding: 32px; margin-bottom: 40px; box-shadow: 0 2px 12px rgba(15,31,56,0.07); overflow-x: auto; }
-.wf-title { font-size: 17px; font-weight: 700; color: #172B4D; margin-bottom: 4px; }
-.wf-sub { font-size: 12px; color: #64748B; margin-bottom: 16px; line-height: 1.6; }
-.mermaid { margin-top: 8px; }
-.note { background: #E6F7F7; border: 1px solid #00BFBF; border-radius: 8px; padding: 10px 16px; font-size: 11.5px; color: #0F1F38; margin: 0 0 16px 0; line-height: 1.6; }
-.warn { background: #FEF9C3; border: 1px solid #D97706; border-radius: 8px; padding: 10px 16px; font-size: 11.5px; color: #78350F; margin: 0 0 16px 0; line-height: 1.6; }
-.legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; padding-top: 18px; border-top: 1px solid #E2E8F0; }
-.legend-item { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #2D3F5C; }
-.legend-box { width: 20px; height: 16px; border-radius: 4px; flex-shrink: 0; }
-.wf-num { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; background:#172B4D; color:#fff; border-radius:50%; font-size:13px; font-weight:700; margin-right:8px; vertical-align:middle; }
-table.ref { width:100%; border-collapse:collapse; font-size:12px; margin-top:12px; }
-table.ref th { background:#172B4D; color:#fff; padding:8px 12px; text-align:left; }
-table.ref td { padding:8px 12px; border-bottom:1px solid #E2E8F0; vertical-align:top; }
-table.ref tr:nth-child(even) td { background:#F8FAFC; }
-.bdg { display:inline-block; padding:2px 9px; border-radius:10px; font-size:11px; font-weight:700; }
+*{box-sizing:border-box;}
+body{font-family:Arial,sans-serif;background:#F4F6F9;margin:0;padding:24px;}
+h1{color:#172B4D;font-size:22px;margin-bottom:4px;}
+.subtitle{color:#2D3F5C;font-size:13px;margin-bottom:32px;}
+.wf{background:white;border-radius:16px;padding:32px;margin-bottom:40px;box-shadow:0 2px 12px rgba(15,31,56,.07);overflow-x:auto;}
+.wf-title{font-size:17px;font-weight:700;color:#172B4D;margin-bottom:4px;}
+.wf-sub{font-size:12px;color:#64748B;margin-bottom:16px;line-height:1.6;}
+.mermaid{margin-top:8px;}
+.note{background:#E6F7F7;border:1px solid #00BFBF;border-radius:8px;padding:10px 16px;font-size:11.5px;color:#0F1F38;margin:0 0 16px 0;line-height:1.6;}
+.warn{background:#FEF9C3;border:1px solid #D97706;border-radius:8px;padding:10px 16px;font-size:11.5px;color:#78350F;margin:0 0 16px 0;line-height:1.6;}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px;padding-top:18px;border-top:1px solid #E2E8F0;}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:11px;color:#2D3F5C;}
+.legend-box{width:20px;height:16px;border-radius:4px;flex-shrink:0;}
+.wf-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#172B4D;color:#fff;border-radius:50%;font-size:13px;font-weight:700;margin-right:8px;vertical-align:middle;}
+table.ref{width:100%;border-collapse:collapse;font-size:12px;margin-top:12px;}
+table.ref th{background:#172B4D;color:#fff;padding:8px 12px;text-align:left;}
+table.ref td{padding:8px 12px;border-bottom:1px solid #E2E8F0;vertical-align:top;}
+table.ref tr:nth-child(even) td{background:#F8FAFC;}
+.bdg{display:inline-block;padding:2px 9px;border-radius:10px;font-size:11px;font-weight:700;}
 </style>
 </head>
 <body>
-
 <h1>Phase 7 Workflows — Bounced Payment Recovery</h1>
-<p class="subtitle">DirectDebit.cc &nbsp;·&nbsp; Phase 7 &nbsp;·&nbsp; Updated June 2026 &nbsp;·&nbsp; 10 Workflows</p>
+<p class="subtitle">DirectDebit.cc &nbsp;·&nbsp; Phase 7 &nbsp;·&nbsp; Updated June 2026 &nbsp;·&nbsp; 13 Workflows</p>
 
 <script>
-mermaid.initialize({
-  startOnLoad: true, theme: 'base',
-  themeVariables: {
-    primaryColor: '#1E40AF', primaryTextColor: '#1E293B',
-    primaryBorderColor: '#1E3A8A', lineColor: '#374151',
-    edgeLabelBackground: '#FEF9C3', fontSize: '13px'
-  },
-  flowchart: { curve: 'linear', padding: 20, nodeSpacing: 45, rankSpacing: 55, htmlLabels: true }
-});
+mermaid.initialize({startOnLoad:true,theme:'base',themeVariables:{primaryColor:'#1E40AF',primaryTextColor:'#1E293B',primaryBorderColor:'#1E3A8A',lineColor:'#374151',edgeLabelBackground:'#FEF9C3',fontSize:'13px'},flowchart:{curve:'linear',padding:20,nodeSpacing:45,rankSpacing:55,htmlLabels:true}});
 </script>
 
-
-<!-- ═══ WF 1 ══════════════════════════════════════════════════════ -->
+<!-- WF 1 ═══════════════════════════════════════════════════════════ -->
 <div class="wf">
   <div class="wf-title"><span class="wf-num">1</span>Bounce Category Routing</div>
-  <div class="wf-sub">Trigger: Phase 6 sets a collection status to Bounced &nbsp;·&nbsp; Actors: System (fully automated) &nbsp;·&nbsp; 7 categories</div>
-  <div class="note">ℹ️ Every time Phase 6 marks a collection as Bounced it immediately triggers this workflow. The system reads the bounce reason code and routes the collection to the correct recovery workflow. The routing is deterministic — the same reason code always maps to the same category.</div>
+  <div class="wf-sub">Trigger: Phase 6 sets a collection to Bounced &nbsp;·&nbsp; System (fully automated) &nbsp;·&nbsp; 10 categories</div>
+  <div class="note">ℹ️ Every time Phase 6 marks a collection as Bounced this workflow runs immediately. The system reads the reason code and routes the collection to the correct recovery workflow.</div>
   <div class="mermaid">
 flowchart TD
   A([START — Phase 6 sets collection to Bounced]) --> B
   B[System reads the bounce reason code]:::sys --> C
-
-  C{"Reason code in<br/>A E F G N O V W X Y Z ?"}:::dec
-  C -->|YES| C1["→ WF 2 · NEW DD CASES<br/>New mandate required"]:::cat1
+  C{"Code in A F G V W ?"}:::dec
+  C -->|YES| C1["→ WF 2 · NEW DD CASES"]:::cat1
   C -->|NO| D
-
-  D{"Reason code is D ?"}:::dec
-  D -->|YES| D1["→ WF 3 · NO ACTION<br/>Payer deceased — ops review only"]:::cat2
+  D{"Code in E N X Y Z ?"}:::dec
+  D -->|YES| D1["→ WF 3 · REACTIVATION OR NEW MANDATE"]:::cat2
   D -->|NO| E
-
-  E{"Reason code in C I L ?"}:::dec
-  E -->|YES| E1["→ WF 4 · BOUNCED + MESSAGE<br/>Notify payer · auto-retry"]:::cat3
+  E{"Code is O ?"}:::dec
+  E -->|YES| E1["→ WF 4 · DDA CANCELLED"]:::cat3
   E -->|NO| F
-
-  F{"Reason code is T ?"}:::dec
-  F -->|YES| F1["→ WF 5 · BOUNCED NO MESSAGE<br/>Silent auto-retry"]:::cat4
+  F{"Code is D ?"}:::dec
+  F -->|YES| F1["→ WF 5 · NO ACTION<br/>Payer deceased"]:::cat4
   F -->|NO| G
-
-  G{"Reason code in M P S ?"}:::dec
-  G -->|YES| G1["→ WF 6 · DISHONORED PAYMENTS<br/>Notify payer · auto-retry"]:::cat5
+  G{"Code in C I L ?"}:::dec
+  G -->|YES| G1["→ WF 6 · BOUNCED + MESSAGE"]:::cat5
   G -->|NO| H
-
-  H{"Reason code is R ?"}:::dec
-  H -->|YES| H1["→ WF 7 · SILENT RESUBMISSION<br/>Auto-compare DDR/DDA · resubmit"]:::cat6
+  H{"Code is T ?"}:::dec
+  H -->|YES| H1["→ WF 7 · BOUNCED NO MESSAGE<br/>Silent auto-retry"]:::cat6
   H -->|NO| I
-
-  I["→ WF 8 · SCHEDULED RETRY<br/>Reason code is U<br/>Wait for next calendar period"]:::cat7
+  I{"Code is P ?"}:::dec
+  I -->|YES| I1["→ WF 8 · DISHONORED PAYMENTS"]:::cat7
+  I -->|NO| J
+  J{"Code in M S ?"}:::dec
+  J -->|YES| J1["→ WF 9 · MERCHANT NOTIFICATION"]:::cat8
+  J -->|NO| K
+  K{"Code is R ?"}:::dec
+  K -->|YES| K1["→ WF 10 · SILENT RESUBMISSION<br/>1 auto-attempt only"]:::cat9
+  K -->|NO| L1["→ WF 11 · SCHEDULED RETRY<br/>Code is U — wait for due date"]:::cat10
 
   classDef sys  fill:#1E40AF,color:#fff,stroke:none
   classDef dec  fill:#D97706,color:#fff,stroke:none
   classDef cat1 fill:#DC2626,color:#fff,stroke:none
-  classDef cat2 fill:#475569,color:#fff,stroke:none
-  classDef cat3 fill:#7C3AED,color:#fff,stroke:none
-  classDef cat4 fill:#0369A1,color:#fff,stroke:none
-  classDef cat5 fill:#92400E,color:#fff,stroke:none
-  classDef cat6 fill:#065F46,color:#fff,stroke:none
-  classDef cat7 fill:#1D4ED8,color:#fff,stroke:none
+  classDef cat2 fill:#7C3AED,color:#fff,stroke:none
+  classDef cat3 fill:#0369A1,color:#fff,stroke:none
+  classDef cat4 fill:#475569,color:#fff,stroke:none
+  classDef cat5 fill:#6D28D9,color:#fff,stroke:none
+  classDef cat6 fill:#0E7490,color:#fff,stroke:none
+  classDef cat7 fill:#92400E,color:#fff,stroke:none
+  classDef cat8 fill:#B45309,color:#fff,stroke:none
+  classDef cat9 fill:#065F46,color:#fff,stroke:none
+  classDef cat10 fill:#1D4ED8,color:#fff,stroke:none
   </div>
-
   <table class="ref" style="margin-top:20px;">
     <tr><th>WF</th><th>Category</th><th>Codes</th><th>Recovery approach</th></tr>
-    <tr><td>WF 2</td><td><span class="bdg" style="background:#FEE2E2;color:#DC2626;">NEW DD CASES</span></td><td>A E F G N O V W X Y Z</td><td>Create new mandate → cancel old → send payer new mandate creation link</td></tr>
-    <tr><td>WF 3</td><td><span class="bdg" style="background:#F1F5F9;color:#475569;">NO ACTION</span></td><td>D</td><td>No automated action — flagged for ops only · Close Case action available</td></tr>
-    <tr><td>WF 4</td><td><span class="bdg" style="background:#EDE9FE;color:#7C3AED;">BOUNCED + MESSAGE</span></td><td>C I L</td><td>Send reason-specific message → wait → auto-retry · Bank submissions only</td></tr>
-    <tr><td>WF 5</td><td><span class="bdg" style="background:#E0F2FE;color:#0369A1;">BOUNCED NO MESSAGE</span></td><td>T</td><td>Silent auto-retry after waiting period · Bank submissions only</td></tr>
-    <tr><td>WF 6</td><td><span class="bdg" style="background:#FEF3C7;color:#92400E;">DISHONORED PAYMENTS</span></td><td>M P S</td><td>Send reason-specific message → wait → auto-retry · Bank submissions only</td></tr>
-    <tr><td>WF 7</td><td><span class="bdg" style="background:#D1FAE5;color:#065F46;">SILENT RESUBMISSION</span></td><td>R</td><td>Auto-compare DDR/DDA → correct mismatch → resubmit silently · Ops after half max</td></tr>
-    <tr><td>WF 8</td><td><span class="bdg" style="background:#DBEAFE;color:#1D4ED8;">SCHEDULED RETRY</span></td><td>U</td><td>Wait for start of next calendar period → auto-submit</td></tr>
+    <tr><td>WF 2</td><td><span class="bdg" style="background:#FEE2E2;color:#DC2626;">NEW DD CASES</span></td><td>A F G V W</td><td>New mandate → cancel old → send payer new mandate creation link</td></tr>
+    <tr><td>WF 3</td><td><span class="bdg" style="background:#EDE9FE;color:#7C3AED;">REACTIVATION OR NEW MANDATE</span></td><td>E N X Y Z</td><td>Dual-option message: confirm reactivation OR new mandate link · both counters</td></tr>
+    <tr><td>WF 4</td><td><span class="bdg" style="background:#DBEAFE;color:#0369A1;">DDA CANCELLED</span></td><td>O</td><td>Notify merchant only · Ops: cancel on system or reissue new mandate</td></tr>
+    <tr><td>WF 5</td><td><span class="bdg" style="background:#F1F5F9;color:#475569;">NO ACTION</span></td><td>D</td><td>Flagged for ops only · Close Case action</td></tr>
+    <tr><td>WF 6</td><td><span class="bdg" style="background:#EDE9FE;color:#6D28D9;">BOUNCED + MESSAGE</span></td><td>C I L</td><td>Message + auto-retry · bank submissions only</td></tr>
+    <tr><td>WF 7</td><td><span class="bdg" style="background:#ECFEFF;color:#0E7490;">BOUNCED NO MESSAGE</span></td><td>T</td><td>Silent auto-retry · bank submissions only · alert at Max-1</td></tr>
+    <tr><td>WF 8</td><td><span class="bdg" style="background:#FEF3C7;color:#92400E;">DISHONORED PAYMENTS</span></td><td>P</td><td>Message + auto-retry · bank submissions only</td></tr>
+    <tr><td>WF 9</td><td><span class="bdg" style="background:#FED7AA;color:#B45309;">MERCHANT NOTIFICATION</span></td><td>M S</td><td>Notify merchant only · no automated action · ops manual</td></tr>
+    <tr><td>WF 10</td><td><span class="bdg" style="background:#D1FAE5;color:#065F46;">SILENT RESUBMISSION</span></td><td>R</td><td>1 auto-attempt only · ops takes over after</td></tr>
+    <tr><td>WF 11</td><td><span class="bdg" style="background:#DBEAFE;color:#1D4ED8;">SCHEDULED RETRY</span></td><td>U</td><td>No automated action · ops: Close Case only</td></tr>
   </table>
-
   <div class="legend" style="margin-top:16px;">
     <div class="legend-item"><div class="legend-box" style="background:#1E40AF;"></div>System</div>
     <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
-    <div class="legend-item"><div class="legend-box" style="background:#DC2626;"></div>WF 2 — NEW DD CASES</div>
-    <div class="legend-item"><div class="legend-box" style="background:#475569;"></div>WF 3 — NO ACTION</div>
-    <div class="legend-item"><div class="legend-box" style="background:#7C3AED;"></div>WF 4 — BOUNCED + MESSAGE</div>
-    <div class="legend-item"><div class="legend-box" style="background:#0369A1;"></div>WF 5 — BOUNCED NO MESSAGE</div>
-    <div class="legend-item"><div class="legend-box" style="background:#92400E;"></div>WF 6 — DISHONORED PAYMENTS</div>
-    <div class="legend-item"><div class="legend-box" style="background:#065F46;"></div>WF 7 — SILENT RESUBMISSION</div>
-    <div class="legend-item"><div class="legend-box" style="background:#1D4ED8;"></div>WF 8 — SCHEDULED RETRY</div>
   </div>
 </div>
 
-
-<!-- ═══ WF 2 ══════════════════════════════════════════════════════ -->
+<!-- WF 2 ═══════════════════════════════════════════════════════════ -->
 <div class="wf">
   <div class="wf-title"><span class="wf-num">2</span>NEW DD CASES — New Mandate Recovery</div>
-  <div class="wf-sub">Codes: A · E · F · G · N · O · V · W · X · Y · Z &nbsp;·&nbsp; The payer's account or card is unusable — a new mandate is required</div>
-  <div class="note">ℹ️ System creates the new mandate first, then cancels the old one, then sends the payer a reason-specific message with the new mandate creation link. This order is intentional — a valid mandate must exist before the old one is removed.<br/>ℹ️ The original bounced collection stays Bounced and is retried once the new mandate is approved by the bank.</div>
+  <div class="wf-sub">Codes: A · F · G · V · W &nbsp;·&nbsp; Account or card is permanently unusable</div>
+  <div class="note">ℹ️ New mandate created first → old mandate cancelled → payer sent message with new mandate creation link. Original collection stays Bounced until new mandate approved, then retried under it.</div>
   <div class="mermaid">
 flowchart TD
   A([START — Collection routed from WF 1]) --> B
   B{Max Payer Reminders reached?}:::dec
-  B -->|YES| FAIL["Status → Failed Max Payer Reminders<br/>Moves to SCR-BNC-005"]:::fail
+  B -->|YES| FAIL["Status → Failed Max Payer Reminders · SCR-BNC-005"]:::fail
   B -->|NO| C
-  C["System creates new mandate record<br/>Status: Pending Payer Signature"]:::sys --> D
-  D["System cancels the original mandate"]:::sys --> E
-  E["System sends payer a reason-specific message<br/>with the new mandate creation link<br/>via configured contact channel"]:::sys --> F
-  F["Payer Reminders +1<br/>Status → Pending New Mandate<br/>Waiting period starts"]:::sys --> G
-  G{Payer completes new mandate?}:::dec
-  G -->|"NO — no response"| H{Max Payer Reminders reached?}:::dec
-  H -->|YES| FAIL
-  H -->|NO| E
-  G -->|YES| I["Bank reviews new mandate<br/>Phase 3 / Phase 4 approval flow"]:::bank
-  I --> J{Bank approves?}:::dec
-  J -->|NO| K["Phase 4 correction flow begins"]:::loop
-  J -->|YES| L["System resubmits original collection<br/>under new approved mandate<br/>Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys
+  C["System creates new mandate · cancels original mandate"]:::sys --> D
+  D["System sends payer a reason-specific message with new mandate creation link<br/>via configured contact channel · Payer Reminders +1<br/>Status → Pending Payer to Sign New Mandate"]:::sys --> E
+  E{Payer completes new mandate?}:::dec
+  E -->|"NO — no response"| F{Max Payer Reminders reached?}:::dec
+  F -->|YES| FAIL
+  F -->|NO| D
+  E -->|YES| G["Status → Pending Bank to Approve New Mandate<br/>Bank reviews · Phase 3 / Phase 4 approval flow"]:::bank
+  G --> H{Bank approves?}:::dec
+  H -->|NO| K["Phase 4 correction flow"]:::loop
+  H -->|YES| L["System resubmits original bounced collection under new mandate<br/>Bank Submissions +1 · Status → Pending Bank Response"]:::sys
   L --> M{Bank response?}:::dec
-  M -->|Received| OK["Status → Received · Moves to Collection Log"]:::ok
+  M -->|Received| OK["Status → Received · Collection Log"]:::ok
   M -->|"Bounced again"| N["WF 1 re-routes based on new reason code"]:::loop
 
   classDef sys  fill:#DC2626,color:#fff,stroke:none
@@ -160,115 +145,182 @@ flowchart TD
   </div>
 </div>
 
-
-<!-- ═══ WF 3 ══════════════════════════════════════════════════════ -->
+<!-- WF 3 ═══════════════════════════════════════════════════════════ -->
 <div class="wf">
-  <div class="wf-title"><span class="wf-num">3</span>NO ACTION — Payer Deceased</div>
-  <div class="wf-sub">Code: D (Payer Deceased) &nbsp;·&nbsp; No automated action · No payer contact · Ops review only</div>
-  <div class="note">ℹ️ The account holder is deceased. There is no payer to contact and no account to retry. The system flags the collection and makes it visible to the ops team. No message is sent. No retry is attempted. The only available action is for ops to close the case manually.</div>
+  <div class="wf-title"><span class="wf-num">3</span>REACTIVATION OR NEW MANDATE</div>
+  <div class="wf-sub">Codes: E (Card Blocked) · N (Dormant Account) · X (Blocked by Judiciary) · Y (Blocked by Law Enforcement) · Z (Blocked by Central Bank) &nbsp;·&nbsp; Both Bank Submissions and Payer Reminders counters</div>
+  <div class="note">ℹ️ Message gives payer two clearly labelled options: confirm reactivation (→ auto-retry immediately) OR update payment details for a new mandate. After a merchant-configured threshold of bank submissions, the reactivation option is removed and only the new mandate link remains.<br/>ℹ️ When payer clicks the reactivation link → Bank Submissions +1 · Payer Reminders reset to 0.</div>
   <div class="mermaid">
 flowchart TD
   A([START — Collection routed from WF 1]) --> B
-  B["No automated action taken<br/>No message sent to payer<br/>Collection flagged — visible in SCR-BNC-001"]:::sys --> C
+  B{Max Payer Reminders OR Max Bank Submissions reached?}:::dec
+  B -->|"Max Payer Reminders"| FAIL1["Status → Failed Max Payer Reminders · SCR-BNC-005"]:::fail
+  B -->|"Max Bank Submissions"| FAIL2["Status → Failed Max Bank Submissions · SCR-BNC-004"]:::fail
+  B -->|"Neither"| C
+  C{Bank Submissions < configured reactivation threshold?}:::dec
+  C -->|"YES — early phase"| D
+  C -->|"NO — late phase"| D2
+  D["System sends early phase message:<br/>→ Option 1: Confirm reactivation [REACTIVATION LINK]<br/>→ Option 2: Update payment details [NEW MANDATE LINK]<br/>Payer Reminders +1 · Status → Pending Payer Response"]:::sys --> E
+  D2["System sends late phase message:<br/>→ Only option: Update payment details [NEW MANDATE LINK]<br/>Payer Reminders +1 · Status → Pending Payer Response"]:::sys --> E
+  E{Payer action?}:::dec
+  E -->|"Clicks reactivation link"| F["System auto-retries collection immediately<br/>Bank Submissions +1 · Payer Reminders reset to 0<br/>Status → Pending Bank Response"]:::sys
+  F --> G{Bank response?}:::dec
+  G -->|Received| OK["Status → Received · Collection Log"]:::ok
+  G -->|"Bounced again"| B
+  E -->|"Clicks new mandate link"| H["Phase 1 flow begins for new mandate<br/>Status → Pending Payer to Sign New Mandate"]:::newdd
+  H --> I{New mandate approved by bank?}:::dec
+  I -->|YES| J["System resubmits original collection under new mandate<br/>Bank Submissions +1 · Status → Pending Bank Response"]:::sys --> G
+  I -->|NO| K["Phase 4 correction flow"]:::loop
+  E -->|"No response — waiting period elapsed"| B
+
+  classDef sys   fill:#7C3AED,color:#fff,stroke:none
+  classDef dec   fill:#D97706,color:#fff,stroke:none
+  classDef newdd fill:#DC2626,color:#fff,stroke:none
+  classDef ok    fill:#15803D,color:#fff,stroke:none
+  classDef fail  fill:#9F1239,color:#fff,stroke:none
+  classDef loop  fill:#FFF7ED,color:#92400E,stroke:#F59E0B,stroke-width:2px,stroke-dasharray:4
+  </div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-box" style="background:#7C3AED;"></div>System</div>
+    <div class="legend-item"><div class="legend-box" style="background:#DC2626;"></div>New mandate flow</div>
+    <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
+    <div class="legend-item"><div class="legend-box" style="background:#15803D;"></div>Received</div>
+    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed</div>
+  </div>
+</div>
+
+<!-- WF 4 ═══════════════════════════════════════════════════════════ -->
+<div class="wf">
+  <div class="wf-title"><span class="wf-num">4</span>DDA CANCELLED — Merchant Notification &amp; Ops Action</div>
+  <div class="wf-sub">Code: O (DDA Cancelled) &nbsp;·&nbsp; No automated action · Merchant notified immediately · Ops decides next step</div>
+  <div class="note">ℹ️ The bank has already cancelled the direct debit authority on their side. There is nothing to retry. The merchant is notified and the ops team handles next steps — either cancel the mandate on the system directly, or reissue a new mandate.</div>
+  <div class="mermaid">
+flowchart TD
+  A([START — Collection routed from WF 1]) --> B
+  B["System notifies merchant immediately<br/>No automated action taken · No counter increments<br/>Collection visible in SCR-BNC-001"]:::sys --> C
   C{Ops team action?}:::dec
-  C -->|"Close Case"| D["Ops clicks Close Case<br/>Confirmation dialog"]:::ops
-  D --> E["Collection moves to Failed status<br/>Moves to Collection Log"]:::fail
-  C -->|"No action yet — collection sits"| F["Collection remains visible<br/>in Bounced Payments Management<br/>until ops closes the case"]:::wait
+  C -->|"Cancel Mandate on System"| D["Ops clicks Cancel Mandate on System · Confirmation dialog"]:::ops
+  D --> E["Mandate marked as Cancelled directly<br/>Skips Phase 8 bank submission<br/>(bank already cancelled the DDA)"]:::sys --> END1([END — Mandate cancelled])
+  C -->|"Reissue New Mandate"| F["Ops clicks Reissue New Mandate<br/>Popup shown with two options"]:::ops
+  F --> G{Which plan?}:::dec
+  G -->|"Same plan as current mandate"| H["Old mandate cancelled<br/>New mandate created continuing the existing payment schedule<br/>from the next unpaid payment — same lifetime, not restarted"]:::sys --> I
+  G -->|"New plan"| J["Takes ops to Phase 1 with old mandate details pre-filled"]:::sys --> I
+  I["New mandate goes through Phase 2 / Phase 3 approval flow"]:::sys
+
+  classDef sys fill:#0369A1,color:#fff,stroke:none
+  classDef ops fill:#1E40AF,color:#fff,stroke:none
+  classDef dec fill:#D97706,color:#fff,stroke:none
+  </div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-box" style="background:#1E40AF;"></div>Ops action</div>
+    <div class="legend-item"><div class="legend-box" style="background:#0369A1;"></div>System</div>
+    <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
+  </div>
+</div>
+
+<!-- WF 5 ═══════════════════════════════════════════════════════════ -->
+<div class="wf">
+  <div class="wf-title"><span class="wf-num">5</span>NO ACTION — Payer Deceased</div>
+  <div class="wf-sub">Code: D &nbsp;·&nbsp; No automated action · Ops: Close Case only</div>
+  <div class="mermaid">
+flowchart TD
+  A([START — Collection routed from WF 1]) --> B
+  B["No automated action · No message to payer<br/>Collection flagged in SCR-BNC-001"]:::sys --> C
+  C{Ops team action?}:::dec
+  C -->|"Close Case"| D["Collection → Failed · Moves to Collection Log"]:::fail
+  C -->|"No action yet"| E["Collection remains visible until ops closes it"]:::wait
 
   classDef sys  fill:#475569,color:#fff,stroke:none
-  classDef ops  fill:#1E40AF,color:#fff,stroke:none
   classDef dec  fill:#D97706,color:#fff,stroke:none
   classDef fail fill:#9F1239,color:#fff,stroke:none
   classDef wait fill:#F8FAFC,color:#475569,stroke:#CBD5E1,stroke-width:1.5px
   </div>
   <div class="legend">
     <div class="legend-item"><div class="legend-box" style="background:#475569;"></div>System</div>
-    <div class="legend-item"><div class="legend-box" style="background:#1E40AF;"></div>Ops action (confirmation required)</div>
     <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
     <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed</div>
   </div>
 </div>
 
-
-<!-- ═══ WF 4 ══════════════════════════════════════════════════════ -->
+<!-- WF 6 ═══════════════════════════════════════════════════════════ -->
 <div class="wf">
-  <div class="wf-title"><span class="wf-num">4</span>BOUNCED + MESSAGE — Notify &amp; Auto-Retry</div>
-  <div class="wf-sub">Codes: C (Compliance Issues) · I (Insufficient Funds) · L (Card Limit Exceeded) &nbsp;·&nbsp; Bank submissions counter only · No reply expected from payer</div>
-  <div class="note">ℹ️ System sends an informational message to the payer explaining the reason and informing them that the payment will be retried after the waiting period. No payment link. No reply required. The system retries automatically after the waiting period regardless of payer response.</div>
+  <div class="wf-title"><span class="wf-num">6</span>BOUNCED + MESSAGE — Notify &amp; Auto-Retry</div>
+  <div class="wf-sub">Codes: C (Compliance Issues) · I (Insufficient Funds) · L (Card Limit Exceeded) &nbsp;·&nbsp; Bank submissions counter only · No reply expected</div>
+  <div class="note">ℹ️ System sends a reason-specific informational message and auto-retries after the waiting period — no reply from the payer is needed. Code L message also includes a payment update link as an alternative option.</div>
   <div class="mermaid">
 flowchart TD
   A([START — Collection routed from WF 1]) --> B
   B{Max Bank Submissions reached?}:::dec
-  B -->|YES| FAIL["Status → Failed Max Bank Submissions<br/>Moves to SCR-BNC-004"]:::fail
+  B -->|YES| FAIL["Status → Failed Max Bank Submissions · SCR-BNC-004"]:::fail
   B -->|NO| C
-  C["System sends reason-specific message to payer<br/>via configured contact channel<br/>No link · No reply required<br/>Message includes: we will retry after [waiting period]"]:::sys --> D
+  C["System sends reason-specific message via configured channel<br/>No reply required · Message includes: we will try again in [waiting period]"]:::sys --> D
   D["System waits the configured waiting period<br/>Status → Pending Payer Response"]:::sys --> E
-  E["System automatically resubmits collection to bank<br/>Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys --> F
+  E["System auto-resubmits to bank · Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys --> F
   F{Bank response?}:::dec
-  F -->|Received| OK["Status → Received · Moves to Collection Log"]:::ok
+  F -->|Received| OK["Status → Received · Collection Log"]:::ok
   F -->|"Bounced again"| B
 
-  classDef sys  fill:#7C3AED,color:#fff,stroke:none
+  classDef sys  fill:#6D28D9,color:#fff,stroke:none
   classDef dec  fill:#D97706,color:#fff,stroke:none
   classDef ok   fill:#15803D,color:#fff,stroke:none
   classDef fail fill:#9F1239,color:#fff,stroke:none
   </div>
   <div class="legend">
-    <div class="legend-item"><div class="legend-box" style="background:#7C3AED;"></div>System</div>
+    <div class="legend-item"><div class="legend-box" style="background:#6D28D9;"></div>System</div>
     <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
     <div class="legend-item"><div class="legend-box" style="background:#15803D;"></div>Received</div>
-    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed Max Bank Submissions</div>
+    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed</div>
   </div>
 </div>
 
-
-<!-- ═══ WF 5 ══════════════════════════════════════════════════════ -->
+<!-- WF 7 ═══════════════════════════════════════════════════════════ -->
 <div class="wf">
-  <div class="wf-title"><span class="wf-num">5</span>BOUNCED NO MESSAGE — Silent Auto-Retry</div>
-  <div class="wf-sub">Code: T (Technical Issues at Paying Bank – Auto NoPay Response from UAEDDS) &nbsp;·&nbsp; No payer contact at any point</div>
-  <div class="note">ℹ️ Code T is a technical failure at the bank side — nothing is wrong with the payer's account or funds. The system simply waits the configured waiting period and resubmits silently. No message is ever sent to the payer.</div>
+  <div class="wf-title"><span class="wf-num">7</span>BOUNCED NO MESSAGE — Silent Auto-Retry</div>
+  <div class="wf-sub">Code: T (Technical Issues at Paying Bank) &nbsp;·&nbsp; No payer contact · Alert sent at Max−1 submissions</div>
   <div class="mermaid">
 flowchart TD
   A([START — Collection routed from WF 1]) --> B
   B{Max Bank Submissions reached?}:::dec
-  B -->|YES| FAIL["Status → Failed Max Bank Submissions<br/>Moves to SCR-BNC-004"]:::fail
+  B -->|YES| FAIL["Status → Failed Max Bank Submissions · SCR-BNC-004"]:::fail
   B -->|NO| C
-  C["System waits the configured waiting period<br/>No message sent to payer"]:::sys --> D
-  D["System resubmits collection to bank<br/>Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys --> E
-  E{Bank response?}:::dec
-  E -->|Received| OK["Status → Received · Moves to Collection Log"]:::ok
-  E -->|"Bounced again"| B
+  C{Bank Submissions = Max Bank Submissions − 1?}:::dec
+  C -->|YES| D["System sends alert to merchant and ops:<br/>One submission remaining before maximum is reached"]:::sys
+  C -->|NO| E
+  D --> E
+  E["System waits the configured waiting period · No message to payer"]:::sys --> F
+  F["System auto-resubmits to bank · Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys --> G
+  G{Bank response?}:::dec
+  G -->|Received| OK["Status → Received · Collection Log"]:::ok
+  G -->|"Bounced again"| B
 
-  classDef sys  fill:#0369A1,color:#fff,stroke:none
+  classDef sys  fill:#0E7490,color:#fff,stroke:none
   classDef dec  fill:#D97706,color:#fff,stroke:none
   classDef ok   fill:#15803D,color:#fff,stroke:none
   classDef fail fill:#9F1239,color:#fff,stroke:none
   </div>
   <div class="legend">
-    <div class="legend-item"><div class="legend-box" style="background:#0369A1;"></div>System</div>
+    <div class="legend-item"><div class="legend-box" style="background:#0E7490;"></div>System</div>
     <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
     <div class="legend-item"><div class="legend-box" style="background:#15803D;"></div>Received</div>
-    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed Max Bank Submissions</div>
+    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed</div>
   </div>
 </div>
 
-
-<!-- ═══ WF 6 ══════════════════════════════════════════════════════ -->
+<!-- WF 8 ═══════════════════════════════════════════════════════════ -->
 <div class="wf">
-  <div class="wf-title"><span class="wf-num">6</span>DISHONORED PAYMENTS — Notify &amp; Auto-Retry</div>
-  <div class="wf-sub">Codes: M (Claim Dishonored by Sponsoring Bank) · P (Payment Not Honored by Paying Bank) · S (Payment Stopped / Refused) &nbsp;·&nbsp; Bank submissions counter only · No reply expected</div>
-  <div class="note">ℹ️ The bank actively refused the payment. System sends an informational message asking the payer to contact their bank. Message includes that the payment will be retried after the waiting period. No reply required — system retries automatically after the waiting period.</div>
+  <div class="wf-title"><span class="wf-num">8</span>DISHONORED PAYMENTS — Notify &amp; Auto-Retry</div>
+  <div class="wf-sub">Code: P (Payment Not Honored by Paying Bank) &nbsp;·&nbsp; Bank submissions counter only · No reply expected</div>
   <div class="mermaid">
 flowchart TD
   A([START — Collection routed from WF 1]) --> B
   B{Max Bank Submissions reached?}:::dec
-  B -->|YES| FAIL["Status → Failed Max Bank Submissions<br/>Moves to SCR-BNC-004"]:::fail
+  B -->|YES| FAIL["Status → Failed Max Bank Submissions · SCR-BNC-004"]:::fail
   B -->|NO| C
-  C["System sends reason-specific message to payer<br/>via configured contact channel<br/>Message asks payer to contact their bank<br/>Message includes: we will retry after [waiting period]"]:::sys --> D
+  C["System sends message asking payer to contact their bank<br/>Message includes: we will try again in [waiting period]"]:::sys --> D
   D["System waits the configured waiting period<br/>Status → Pending Payer Response"]:::sys --> E
-  E["System automatically resubmits collection to bank<br/>Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys --> F
+  E["System auto-resubmits to bank · Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys --> F
   F{Bank response?}:::dec
-  F -->|Received| OK["Status → Received · Moves to Collection Log"]:::ok
+  F -->|Received| OK["Status → Received · Collection Log"]:::ok
   F -->|"Bounced again"| B
 
   classDef sys  fill:#92400E,color:#fff,stroke:none
@@ -280,111 +332,141 @@ flowchart TD
     <div class="legend-item"><div class="legend-box" style="background:#92400E;"></div>System</div>
     <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
     <div class="legend-item"><div class="legend-box" style="background:#15803D;"></div>Received</div>
-    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed Max Bank Submissions</div>
+    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed</div>
   </div>
 </div>
 
-
-<!-- ═══ WF 7 ══════════════════════════════════════════════════════ -->
+<!-- WF 9 ═══════════════════════════════════════════════════════════ -->
 <div class="wf">
-  <div class="wf-title"><span class="wf-num">7</span>SILENT RESUBMISSION — Auto-Compare DDR/DDA &amp; Retry</div>
-  <div class="wf-sub">Code: R (DDR Details Inconsistent with DDA Details) &nbsp;·&nbsp; System auto-corrects mismatch and resubmits · Ops intervenes after half of Max Bank Submissions</div>
-  <div class="note">ℹ️ The DDR (Direct Debit Request) details do not match the DDA (Direct Debit Authority / mandate) details stored in the system. The system automatically compares the two, corrects the mismatch, and resubmits silently. No payer contact is made.<br/>⚠️ Once Bank Submissions exceeds half of the configured Max Bank Submissions, the automated loop pauses and the ops team must review and intervene manually before any further resubmission.</div>
+  <div class="wf-title"><span class="wf-num">9</span>MERCHANT NOTIFICATION — Notify &amp; Ops Manual Action</div>
+  <div class="wf-sub">Codes: M (Claim Dishonored by Sponsoring Bank) · S (Payment Stopped / Refused) &nbsp;·&nbsp; No automated payer contact · Merchant notified immediately</div>
+  <div class="note">ℹ️ No message is sent to the payer. The merchant is notified and the ops team investigates and decides what action to take. Any resubmission is manual only.</div>
   <div class="mermaid">
 flowchart TD
   A([START — Collection routed from WF 1]) --> B
-  B{Max Bank Submissions reached?}:::dec
-  B -->|YES| FAIL["Status → Failed Max Bank Submissions<br/>Moves to SCR-BNC-004"]:::fail
-  B -->|NO| C
-  C{"Bank Submissions exceeded<br/>half of Max Bank Submissions?"}:::dec
-  C -->|"YES — ops must intervene"| D["Automated loop pauses<br/>Collection flagged for ops manual review<br/>Ops must investigate and resubmit manually"]:::ops
-  C -->|NO| E
-  E["System compares DDR details<br/>against DDA data in the system"]:::sys --> F
-  F["System corrects any mismatched fields"]:::sys --> G
-  G["System resubmits collection to bank silently<br/>Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys --> H
-  H{Bank response?}:::dec
-  H -->|Received| OK["Status → Received · Moves to Collection Log"]:::ok
-  H -->|"Bounced again with code R"| B
-  H -->|"Bounced with different code"| I["WF 1 re-routes based on new reason code"]:::loop
+  B["System notifies merchant immediately<br/>No message to payer · No auto-retry<br/>Collection visible in SCR-BNC-001"]:::sys --> C
+  C{Ops team action?}:::dec
+  C -->|"Resend to Bank"| D["Ops resubmits after reviewing case · Bank Submissions +1<br/>Status → Pending Bank Response"]:::ops
+  D --> E{Bank response?}:::dec
+  E -->|Received| OK["Status → Received · Collection Log"]:::ok
+  E -->|"Bounced again"| F{Max Bank Submissions reached?}:::dec
+  F -->|YES| FAIL["Status → Failed Max Bank Submissions · SCR-BNC-004"]:::fail
+  F -->|NO| C
+  C -->|Escalate| G["Status → Escalated · SCR-BNC-003"]:::ops
+  G --> H{Senior ops decision?}:::dec
+  H -->|Retry| D
+  H -->|"Stop Collection"| STOP
+  C -->|"Stop Collection"| STOP["Collection permanently stopped<br/>Moves to Collection Log as Stopped"]:::stopped
 
-  classDef sys  fill:#065F46,color:#fff,stroke:none
-  classDef ops  fill:#1E40AF,color:#fff,stroke:none
-  classDef dec  fill:#D97706,color:#fff,stroke:none
-  classDef ok   fill:#15803D,color:#fff,stroke:none
-  classDef fail fill:#9F1239,color:#fff,stroke:none
-  classDef loop fill:#FFF7ED,color:#92400E,stroke:#F59E0B,stroke-width:2px,stroke-dasharray:4
+  classDef sys     fill:#B45309,color:#fff,stroke:none
+  classDef ops     fill:#1E40AF,color:#fff,stroke:none
+  classDef dec     fill:#D97706,color:#fff,stroke:none
+  classDef ok      fill:#15803D,color:#fff,stroke:none
+  classDef fail    fill:#9F1239,color:#fff,stroke:none
+  classDef stopped fill:#475569,color:#fff,stroke:none
   </div>
   <div class="legend">
-    <div class="legend-item"><div class="legend-box" style="background:#065F46;"></div>System</div>
-    <div class="legend-item"><div class="legend-box" style="background:#1E40AF;"></div>Ops intervention required</div>
+    <div class="legend-item"><div class="legend-box" style="background:#B45309;"></div>System</div>
+    <div class="legend-item"><div class="legend-box" style="background:#1E40AF;"></div>Ops action</div>
     <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
     <div class="legend-item"><div class="legend-box" style="background:#15803D;"></div>Received</div>
     <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed</div>
-    <div class="legend-item"><div class="legend-box" style="background:#FFF7ED;border:2px dashed #F59E0B;"></div>Continues in another flow</div>
+    <div class="legend-item"><div class="legend-box" style="background:#475569;"></div>Stopped</div>
   </div>
 </div>
 
-
-<!-- ═══ WF 8 ══════════════════════════════════════════════════════ -->
+<!-- WF 10 ══════════════════════════════════════════════════════════ -->
 <div class="wf">
-  <div class="wf-title"><span class="wf-num">8</span>SCHEDULED RETRY — Wait for Next Calendar Period</div>
-  <div class="wf-sub">Code: U (Amount Not Yet Due) &nbsp;·&nbsp; System waits for the next calendar period based on mandate frequency then auto-submits</div>
-  <div class="note">ℹ️ The bank returned the collection because the amount is not yet due. The system waits until the start of the next calendar period based on the mandate's frequency (e.g. Monthly mandate → waits until the 1st of next month; Weekly → next Monday) and then resubmits automatically. No message is sent to the payer.<br/>ℹ️ If the bank bounces again with a different reason code, WF 1 re-routes to the appropriate group for that new code.</div>
+  <div class="wf-title"><span class="wf-num">10</span>SILENT RESUBMISSION — Auto-Compare DDR/DDA &amp; Single Retry</div>
+  <div class="wf-sub">Code: R (DDR Details Inconsistent with DDA Details) &nbsp;·&nbsp; 1 auto-attempt only · Ops takes over after</div>
+  <div class="warn">⚠️ This code is extremely rare — less than one occurrence in a decade. The system makes exactly one auto-attempt. If still bounced, all further action must be manual.</div>
   <div class="mermaid">
 flowchart TD
   A([START — Collection routed from WF 1]) --> B
-  B{Max Bank Submissions reached?}:::dec
-  B -->|YES| FAIL["Status → Failed Max Bank Submissions<br/>Moves to SCR-BNC-004"]:::fail
-  B -->|NO| C
-  C["System identifies the start of the next<br/>calendar period based on mandate frequency<br/>e.g. Monthly → 1st of next month<br/>Weekly → next Monday"]:::sys --> D
-  D["System waits until that date<br/>No message sent to payer<br/>Status → Pending Bank Resubmission"]:::sys --> E
-  E["System resubmits collection to bank<br/>Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys --> F
-  F{Bank response?}:::dec
-  F -->|Received| OK["Status → Received · Moves to Collection Log"]:::ok
-  F -->|"Bounced again with code U"| B
-  F -->|"Bounced with different code"| G["WF 1 re-routes based on new reason code"]:::loop
+  B["System compares DDR details against DDA data in system<br/>System corrects any mismatched fields"]:::sys --> C
+  C["System resubmits to bank once · Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys --> D
+  D{Bank response?}:::dec
+  D -->|Received| OK["Status → Received · Collection Log"]:::ok
+  D -->|"Bounced again (any code)"| E
+  E["Automated loop stops · Collection flagged for ops manual review<br/>Ops must investigate before any further resubmission"]:::sys --> F
+  F{Ops team action?}:::dec
+  F -->|"Resend to Bank"| G["Ops resubmits after review · Bank Submissions +1"]:::ops --> H
+  H{Bank response?}:::dec
+  H -->|Received| OK
+  H -->|"Bounced again"| I{Max Bank Submissions reached?}:::dec
+  I -->|YES| FAIL["Status → Failed Max Bank Submissions · SCR-BNC-004"]:::fail
+  I -->|NO| F
+  F -->|Escalate| J["Status → Escalated · SCR-BNC-003"]:::ops
+  F -->|"Stop Collection"| STOP["Moves to Collection Log as Stopped"]:::stopped
+
+  classDef sys     fill:#065F46,color:#fff,stroke:none
+  classDef ops     fill:#1E40AF,color:#fff,stroke:none
+  classDef dec     fill:#D97706,color:#fff,stroke:none
+  classDef ok      fill:#15803D,color:#fff,stroke:none
+  classDef fail    fill:#9F1239,color:#fff,stroke:none
+  classDef stopped fill:#475569,color:#fff,stroke:none
+  </div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-box" style="background:#065F46;"></div>System</div>
+    <div class="legend-item"><div class="legend-box" style="background:#1E40AF;"></div>Ops action</div>
+    <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
+    <div class="legend-item"><div class="legend-box" style="background:#15803D;"></div>Received</div>
+    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed</div>
+    <div class="legend-item"><div class="legend-box" style="background:#475569;"></div>Stopped</div>
+  </div>
+</div>
+
+<!-- WF 11 ══════════════════════════════════════════════════════════ -->
+<div class="wf">
+  <div class="wf-title"><span class="wf-num">11</span>SCHEDULED RETRY — No Action · Ops Close Case Only</div>
+  <div class="wf-sub">Code: U (Amount Not Yet Due) &nbsp;·&nbsp; Extremely rare · No automated action · Ops: Close Case only</div>
+  <div class="mermaid">
+flowchart TD
+  A([START — Collection routed from WF 1]) --> B
+  B["No automated action · No message to payer<br/>Collection flagged in SCR-BNC-001 for ops review"]:::sys --> C
+  C{Ops team action?}:::dec
+  C -->|"Close Case"| D["Collection → Failed · Moves to Collection Log"]:::fail
+  C -->|"No action yet"| E["Collection remains until ops closes it"]:::wait
 
   classDef sys  fill:#1D4ED8,color:#fff,stroke:none
   classDef dec  fill:#D97706,color:#fff,stroke:none
-  classDef ok   fill:#15803D,color:#fff,stroke:none
   classDef fail fill:#9F1239,color:#fff,stroke:none
-  classDef loop fill:#FFF7ED,color:#92400E,stroke:#F59E0B,stroke-width:2px,stroke-dasharray:4
+  classDef wait fill:#F8FAFC,color:#1D4ED8,stroke:#DBEAFE,stroke-width:1.5px
   </div>
   <div class="legend">
     <div class="legend-item"><div class="legend-box" style="background:#1D4ED8;"></div>System</div>
     <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
-    <div class="legend-item"><div class="legend-box" style="background:#15803D;"></div>Received</div>
-    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed Max Bank Submissions</div>
-    <div class="legend-item"><div class="legend-box" style="background:#FFF7ED;border:2px dashed #F59E0B;"></div>Continues in another flow</div>
+    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed</div>
   </div>
 </div>
 
-
-<!-- ═══ WF 9 ══════════════════════════════════════════════════════ -->
+<!-- WF 12 ══════════════════════════════════════════════════════════ -->
 <div class="wf">
-  <div class="wf-title"><span class="wf-num">9</span>Ops Manual Actions on Bounced Collections</div>
-  <div class="wf-sub">Screen: SCR-BNC-001 Bounced Payments Management &nbsp;·&nbsp; All actions require confirmation &nbsp;·&nbsp; Manual actions apply immediately regardless of automated flow state</div>
-  <div class="note">ℹ️ The ops team can intervene on any Bounced collection at any time. Every action requires a confirmation dialog. Non-destructive actions use a Teal confirm button. Close Case and Stop Collection use a Red confirm button.</div>
+  <div class="wf-title"><span class="wf-num">12</span>Ops Manual Actions on Bounced Collections</div>
+  <div class="wf-sub">Screen: SCR-BNC-001 &nbsp;·&nbsp; All actions require confirmation &nbsp;·&nbsp; Manual actions apply immediately</div>
   <div class="mermaid">
 flowchart TD
-  A([Ops opens SCR-BNC-001]) --> B["Ops clicks three-dot menu on a collection"]:::ops
-  B --> C{Action selected?}:::dec
+  A([Ops opens SCR-BNC-001]) --> B["Ops clicks three-dot menu on a collection"]:::ops --> C{Action selected?}:::dec
 
-  C -->|"Send New Mandate Link<br/>(NEW DD CASES only)"| D["New mandate created · Old mandate cancelled<br/>New mandate creation link sent to payer<br/>Payer Reminders +1"]:::sys
+  C -->|"Send New Mandate Link<br/>(NEW DD CASES only)"| D["New mandate created · Old cancelled<br/>New mandate creation link sent · Payer Reminders +1"]:::sys
 
-  C -->|"Send Reminder<br/>(BOUNCED + MESSAGE / DISHONORED)"| E["Reason-specific message sent immediately<br/>Waiting period restarts"]:::sys
+  C -->|"Send Message to Payer<br/>(BOUNCED+MSG · DISHONORED · REACT)"| E["Reason-specific message sent immediately<br/>Waiting period restarts"]:::sys
 
-  C -->|"Resend to Bank<br/>(all except NO ACTION)"| F["Collection resubmitted to bank<br/>Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys
+  C -->|"Resend to Bank<br/>(all except NO ACTION · DDA CANCELLED · SCHEDULED RETRY)"| F["Resubmitted to bank · Bank Submissions +1<br/>Status → Pending Bank Response"]:::sys
 
-  C -->|"Reset Bank Submissions Count<br/>(all except NO ACTION)"| G["Bank Submissions counter reset to 0"]:::sys
+  C -->|"Reset Bank Submissions Count"| G["Bank Submissions counter reset to 0"]:::sys
 
-  C -->|"Reset Payer Reminders Count<br/>(NEW DD CASES only)"| H["Payer Reminders counter reset to 0"]:::sys
+  C -->|"Reset Payer Reminders Count<br/>(NEW DD CASES · REACTIVATION only)"| H["Payer Reminders counter reset to 0"]:::sys
 
-  C -->|"Escalate<br/>(all except NO ACTION)"| I["Status → Escalated<br/>Moves to SCR-BNC-003 Escalation Board"]:::sys
+  C -->|"Escalate<br/>(all except NO ACTION · DDA CANCELLED · SCHEDULED RETRY)"| I["Status → Escalated · SCR-BNC-003"]:::sys
 
-  C -->|"Close Case<br/>(NO ACTION only)"| J["Collection moves to Failed status<br/>Moves to Collection Log"]:::fail
+  C -->|"Cancel Mandate on System<br/>(DDA CANCELLED only)"| J["Mandate cancelled directly · Skips Phase 8"]:::sys
 
-  C -->|"Stop Collection<br/>(all categories)"| K["All retries and messages halted<br/>Moves to Collection Log as Stopped"]:::stopped
+  C -->|"Reissue New Mandate<br/>(DDA CANCELLED only)"| K["Same plan or new plan popup · Phase 1 flow"]:::sys
+
+  C -->|"Close Case<br/>(NO ACTION · SCHEDULED RETRY only)"| L["Collection → Failed · Collection Log"]:::fail
+
+  C -->|"Stop Collection<br/>(all except NO ACTION · DDA CANCELLED · SCHEDULED RETRY)"| M["Permanently stopped · Collection Log as Stopped"]:::stopped
 
   classDef ops     fill:#6D28D9,color:#fff,stroke:none
   classDef sys     fill:#1E40AF,color:#fff,stroke:none
@@ -395,82 +477,96 @@ flowchart TD
 
   <p style="font-size:12px;font-weight:700;color:#172B4D;margin:20px 0 6px;">Actions available per category</p>
   <table class="ref">
-    <tr><th>Action</th><th>NEW DD CASES</th><th>NO ACTION</th><th>BOUNCED + MSG</th><th>NO MESSAGE</th><th>DISHONORED</th><th>SILENT RESUB</th><th>SCHED RETRY</th></tr>
-    <tr><td>Send New Mandate Link</td><td style="text-align:center;">✓</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td></tr>
-    <tr><td>Send Reminder to Payer</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">✓</td><td style="text-align:center;">—</td><td style="text-align:center;">✓</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td></tr>
-    <tr><td>Resend to Bank</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td></tr>
-    <tr><td>Reset Bank Submissions Count</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td></tr>
-    <tr><td>Reset Payer Reminders Count</td><td style="text-align:center;">✓</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td></tr>
-    <tr><td>Escalate</td><td style="text-align:center;">✓</td><td style="text-align:center;">—</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td></tr>
-    <tr><td>Close Case</td><td style="text-align:center;">—</td><td style="text-align:center;">✓</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td></tr>
-    <tr><td>Stop Collection</td><td style="text-align:center;">✓</td><td style="text-align:center;">—</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td></tr>
+    <tr><th>Action</th><th>NEW DD</th><th>REACT</th><th>DDA CANC</th><th>NO ACT</th><th>BNC+MSG</th><th>NO MSG</th><th>DISHON</th><th>MERCH</th><th>SILENT</th><th>SCHED</th></tr>
+    <tr><td>Send New Mandate Link</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td></tr>
+    <tr><td>Send Message to Payer</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td></tr>
+    <tr><td>Resend to Bank</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">—</td></tr>
+    <tr><td>Reset Bank Submissions</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">—</td></tr>
+    <tr><td>Reset Payer Reminders</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td></tr>
+    <tr><td>Escalate</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">—</td></tr>
+    <tr><td>Cancel Mandate on System</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td></tr>
+    <tr><td>Reissue New Mandate</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td></tr>
+    <tr><td>Close Case</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">✓</td></tr>
+    <tr><td>Stop Collection</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">—</td></tr>
   </table>
 
   <div class="legend">
-    <div class="legend-item"><div class="legend-box" style="background:#6D28D9;"></div>Ops action (confirmation required)</div>
+    <div class="legend-item"><div class="legend-box" style="background:#6D28D9;"></div>Ops action</div>
     <div class="legend-item"><div class="legend-box" style="background:#1E40AF;"></div>System result</div>
     <div class="legend-item"><div class="legend-box" style="background:#D97706;"></div>Decision</div>
-    <div class="legend-item"><div class="legend-box" style="background:#9F1239;"></div>Failed</div>
-    <div class="legend-item"><div class="legend-box" style="background:#475569;"></div>Stopped</div>
   </div>
 </div>
 
-
-<!-- ═══ WF 10 ═════════════════════════════════════════════════════ -->
+<!-- WF 13 ══════════════════════════════════════════════════════════ -->
 <div class="wf">
-  <div class="wf-title"><span class="wf-num">10</span>Bounced Payment Status Flow &amp; Screen Routing</div>
-  <div class="wf-sub">Reference — all statuses, their transitions, and which screen each one lives on</div>
+  <div class="wf-title"><span class="wf-num">13</span>Bounced Payment Status Flow &amp; Screen Routing</div>
+  <div class="wf-sub">Reference — all statuses, transitions, and which screen each one lives on</div>
   <div class="mermaid">
 flowchart TD
-  P6["Phase 6 sets collection to Bounced<br/>Phase 7 / WF 1 triggered automatically"]:::entry
+  P6["Phase 6 sets collection to Bounced<br/>WF 1 routes to category"]:::entry
 
-  P6 -->|"NEW DD CASES"| S2["Pending New Mandate<br/>SCR-BNC-001"]:::scr1
-  P6 -->|"BOUNCED + MESSAGE<br/>DISHONORED"| S1["Pending Payer Response<br/>SCR-BNC-001"]:::scr1
-  P6 -->|"BOUNCED NO MESSAGE<br/>SILENT RESUBMISSION<br/>SCHEDULED RETRY"| S3["Pending Bank Resubmission<br/>SCR-BNC-001"]:::scr1
-  P6 -->|"NO ACTION"| S5["Flagged — No Action<br/>SCR-BNC-001"]:::noact
+  P6 -->|"NEW DD CASES"| S2A["Pending Payer to Sign New Mandate<br/>SCR-BNC-001"]:::scr1
+  S2A -->|"Payer signs"| S2B["Pending Bank to Approve New Mandate<br/>SCR-BNC-001"]:::scr1
+  S2B -->|"Bank approves · collection retried"| S4
 
-  S1 -->|"Waiting period ends · auto-retry"| S4
-  S2 -->|"New mandate approved · retry"| S4
-  S3 -->|"Waiting period or due date · auto-retry"| S4
+  P6 -->|"REACTIVATION OR NEW MANDATE"| S3["Pending Payer Response<br/>SCR-BNC-001"]:::scr1
+  S3 -->|"Payer clicks reactivation link · auto-retry"| S4
+  S3 -->|"Payer clicks new mandate · Phase 1 flow"| S2A
+
+  P6 -->|"BOUNCED+MSG · DISHONORED"| S1["Pending Payer Response<br/>SCR-BNC-001"]:::scr1
+  S1 -->|"Auto-retry after waiting period"| S4
+
+  P6 -->|"BOUNCED NO MSG · SILENT RESUB · SCHEDULED RETRY"| S5["Pending Bank Resubmission<br/>SCR-BNC-001"]:::scr1
+  S5 -->|"Auto-retry or ops retry"| S4
+
+  P6 -->|"NO ACTION · DDA CANCELLED · MERCHANT NOTIF"| S6["Ops Review<br/>SCR-BNC-001"]:::scr1
+
   S4["Pending Bank Response<br/>SCR-BNC-001"]:::scr1
-
-  S4 -->|"Bank confirms"| RCV["Received<br/>Collection Log SCR-COL-004"]:::ok
+  S4 -->|"Bank confirms"| RCV["Received · Collection Log SCR-COL-004"]:::ok
   S4 -->|"Bank bounces again"| P6
+  S4 -->|"Max Bank Submissions"| F1["Failed Max Bank Submissions · SCR-BNC-004"]:::fail1
+  S1 -->|"Max Payer Reminders"| F2["Failed Max Payer Reminders · SCR-BNC-005"]:::fail2
+  S2A -->|"Max Payer Reminders"| F2
+  S3 -->|"Max Payer Reminders or Bank Submissions"| F1
+  S3 -->|"Max Payer Reminders"| F2
 
-  S1 -->|"Max Bank Submissions"| F1["Failed Max Bank Submissions<br/>SCR-BNC-004"]:::fail1
-  S2 -->|"Max Payer Reminders"| F2["Failed Max Payer Reminders<br/>SCR-BNC-005"]:::fail2
-  S3 -->|"Max Bank Submissions"| F1
-  S4 -->|"Max Bank Submissions"| F1
+  P6 -->|"Next frequency period starts<br/>before collection recovered"| FREQ["Frequency Period Lapsed · SCR-BNC-007"]:::freq
 
-  P6 -->|"Ops escalates"| ESC["Escalated<br/>SCR-BNC-003"]:::esc
+  P6 -->|"Ops escalates"| ESC["Escalated · SCR-BNC-003"]:::esc
   ESC -->|"Ops retries"| S4
   ESC -->|"Ops stops"| STP
 
-  S5 -->|"Ops clicks Close Case"| CLS["Failed<br/>Collection Log SCR-COL-004"]:::ok
+  S6 -->|"Close Case"| CLFAIL["Failed · Collection Log"]:::ok
   S1 -->|"Ops stops"| STP
-  S2 -->|"Ops stops"| STP
-  S3 -->|"Ops stops"| STP
-  STP["Stopped<br/>Collection Log SCR-COL-004"]:::stopped
+  S5 -->|"Ops stops"| STP
+  STP["Stopped · Collection Log SCR-COL-004"]:::stopped
+
+  F1 --> FCM["Failed Collections Management · SCR-BNC-006"]:::fcm
+  F2 --> FCM
+  FREQ --> FCM
 
   classDef entry   fill:#172B4D,color:#fff,stroke:none
   classDef scr1    fill:#EFF6FF,color:#1E40AF,stroke:#3B82F6,stroke-width:2px
-  classDef noact   fill:#F1F5F9,color:#475569,stroke:#CBD5E1,stroke-width:2px
   classDef ok      fill:#DCFCE7,color:#15803D,stroke:#86EFAC,stroke-width:2px
   classDef fail1   fill:#FFFBEB,color:#92400E,stroke:#FCD34D,stroke-width:2px
   classDef fail2   fill:#FFF1F2,color:#9F1239,stroke:#FDA4AF,stroke-width:2px
+  classDef freq    fill:#FEF2F2,color:#DC2626,stroke:#FECACA,stroke-width:2px
   classDef esc     fill:#EDE9FE,color:#7C3AED,stroke:#A78BFA,stroke-width:2px
   classDef stopped fill:#F1F5F9,color:#475569,stroke:#CBD5E1,stroke-width:2px
+  classDef fcm     fill:#FFF7ED,color:#B45309,stroke:#FED7AA,stroke-width:2px
   </div>
 
   <table class="ref" style="margin-top:20px;">
     <tr><th>Status</th><th>Badge bg · text</th><th>Screen</th><th>Set by</th></tr>
-    <tr><td><span class="bdg" style="background:#EFF6FF;color:#1D4ED8;">Pending Payer Response</span></td><td>#EFF6FF · #1D4ED8</td><td>SCR-BNC-001</td><td>System — message sent (WF 4, WF 6)</td></tr>
-    <tr><td><span class="bdg" style="background:#FEF9C3;color:#854D0E;">Pending New Mandate</span></td><td>#FEF9C3 · #854D0E</td><td>SCR-BNC-001</td><td>System — new mandate link sent (WF 2)</td></tr>
-    <tr><td><span class="bdg" style="background:#F3F0FF;color:#6D28D9;">Pending Bank Resubmission</span></td><td>#F3F0FF · #6D28D9</td><td>SCR-BNC-001</td><td>System — waiting period active (WF 5, WF 7, WF 8)</td></tr>
+    <tr><td><span class="bdg" style="background:#EFF6FF;color:#1D4ED8;">Pending Payer Response</span></td><td>#EFF6FF · #1D4ED8</td><td>SCR-BNC-001</td><td>System — message sent (WF 6, 8) or ops review (WF 9, 10, 11)</td></tr>
+    <tr><td><span class="bdg" style="background:#FEF9C3;color:#854D0E;">Pending Payer to Sign New Mandate</span></td><td>#FEF9C3 · #854D0E</td><td>SCR-BNC-001</td><td>System — new mandate creation link sent (WF 2, WF 3)</td></tr>
+    <tr><td><span class="bdg" style="background:#DBEAFE;color:#1D4ED8;">Pending Bank to Approve New Mandate</span></td><td>#DBEAFE · #1D4ED8</td><td>SCR-BNC-001</td><td>System — payer signed, bank reviewing (WF 2, WF 3)</td></tr>
+    <tr><td><span class="bdg" style="background:#F3F0FF;color:#6D28D9;">Pending Bank Resubmission</span></td><td>#F3F0FF · #6D28D9</td><td>SCR-BNC-001</td><td>System — waiting period active before retry (WF 7, WF 10, WF 11)</td></tr>
     <tr><td><span class="bdg" style="background:#ECFEFF;color:#0E7490;">Pending Bank Response</span></td><td>#ECFEFF · #0E7490</td><td>SCR-BNC-001</td><td>System — collection resubmitted to bank</td></tr>
     <tr><td><span class="bdg" style="background:#EDE9FE;color:#7C3AED;">Escalated</span></td><td>#EDE9FE · #7C3AED · row bg #F5F3FF</td><td>SCR-BNC-003</td><td>Ops — Escalate action</td></tr>
-    <tr><td><span class="bdg" style="background:#FFFBEB;color:#92400E;">Failed Max Bank Submissions</span></td><td>#FFFBEB · #92400E</td><td>SCR-BNC-004</td><td>System — Max Bank Submissions reached</td></tr>
-    <tr><td><span class="bdg" style="background:#FFF1F2;color:#9F1239;">Failed Max Payer Reminders</span></td><td>#FFF1F2 · #9F1239</td><td>SCR-BNC-005</td><td>System — Max Payer Reminders reached (WF 2 only)</td></tr>
+    <tr><td><span class="bdg" style="background:#FFFBEB;color:#92400E;">Failed Max Bank Submissions</span></td><td>#FFFBEB · #92400E</td><td>SCR-BNC-004 → SCR-BNC-006</td><td>System — Max Bank Submissions reached</td></tr>
+    <tr><td><span class="bdg" style="background:#FFF1F2;color:#9F1239;">Failed Max Payer Reminders</span></td><td>#FFF1F2 · #9F1239</td><td>SCR-BNC-005 → SCR-BNC-006</td><td>System — Max Payer Reminders reached (WF 2, WF 3 only)</td></tr>
+    <tr><td><span class="bdg" style="background:#FEF2F2;color:#DC2626;">Frequency Period Lapsed</span></td><td>#FEF2F2 · #DC2626</td><td>SCR-BNC-007 → SCR-BNC-006</td><td>System — next frequency period starts before recovery completes</td></tr>
   </table>
 </div>
 
